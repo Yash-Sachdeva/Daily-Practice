@@ -1,0 +1,32 @@
+Exeptional Handling
+-----------------
+Error-
+1. Compile Time Error(Syntactical)
+
+2. Run Time Error(Logical)
+
+    2.1 Error- Program has to terminate 
+
+    2.2 Exception- Can be handled by the JVM( are the runtime errors that can be handled)
+
+        2.2.1 Compile Time Exception(Checked Exception)
+
+        2.2.2 Run Time Exception(Unchecked Exception)
+
+            - Both are due to logical error
+
+KeyWords for Exceptional Handling-
+1. try
+2. catch
+3. finally
+4. throw
+5. throws
+
+QUESTION INTERVIEW- Scenario when finally block does not execute?
+ANSWER- system.exit() rest in all cases finally is executed so nothing is there to execute in the Program
+
+-  throw is to manually raise an expection 
+-  throws is not to handle the exception instead it is a  method if any error occurs in that method it is not going to 
+    resolve it is will instead going to pass to that method that will handle that particualr Exception
+
+IF you want to create your own custom unchecked exception then extends Exception will make that exception checked to 

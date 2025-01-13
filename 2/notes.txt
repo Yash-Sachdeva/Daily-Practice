@@ -1,0 +1,28 @@
+Access Modifiers 
+-----------
+1. Public- all the classes
+2. Private- only that specific class
+3. Protected- all the classes of that package and all the subclassses outside the scope of that current package
+4. Default- all the classes in that package
+* outer most class level only public/default( not private / protected)
+* there is no default keyword as access modifier(it is just a terminology for default/package scope)
+* always check the class scope before the members
+* compile with -d . to create custom package
+* import statement can only import the current package classes(not of sub package)
+* protected scope members are directly accessed by sub/child classes without creating  instances
+
+-----
+1. Private and protected class are not there only public or default classes can be initialized
+---------------
+Packages
+
+1. import p1.*
+    - it will only import classes of that package not the classes of the sub packages 
+
+--------------------
+-cannot import protected variable from the package through reference variable 
+
+-----------
+a class cannot be declared as static
+static class- that have all the members as static
+eg- MATH,INTEGER,SYSTEM (they have all the lines and methods as static)
