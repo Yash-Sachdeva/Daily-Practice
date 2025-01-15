@@ -1,0 +1,37 @@
+class menu{
+    private static int maxChoice;
+    public static int readChoice(int max)
+    {
+        maxChoice=max;
+        while(true)
+        {
+            System.out.println()
+        }
+    }
+}
+-------------------------------------
+Try with Resources-
+
+public class TryWithResources{
+    public static void main(String args[])
+    {
+        try{
+        Connection con=DriverManager.getConnection();
+        PreparedStatement pstmt=con.prepareStatement();
+        Result rs=pstmt.executeQuery("select * from EMP");
+        
+        rs.close();
+        pstmt.close();
+        con.close();
+        }
+        catch(SQLExeption e)
+        {
+        }
+        finally{
+            rs.close();
+            pstmt.close();
+            con.close();
+        }
+    }
+    
+}
