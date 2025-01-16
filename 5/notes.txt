@@ -1,0 +1,51 @@
+Immutable Class-
+-------------------------------------
+- so that if we want to update or modify any informatio  then we have to make a new object 
+- that will help in keeping the history of the objects that can be used in future
+---------------------
+Sealed Class
+------------
+- sealed class restricts who can inherit that class and use the information  when the child class extends 
+-   non-sealed keyword can be used to make a class normal so that any other normal class can access the class
+- a non sealed class can also be made sealed but we have to then specify the classes who have the permission to access that class 
+--------------------------------------------------------------------------
+VARIABLES
+
+-int a;
+println(a);
+// this gives error as by default 0 is not stored and there is no garbage value in the integer 
+var has to be initialized there only 
+var a;
+a=50;
+- this is not allowed
+
+var a=50; this is the correct method
+
+var can be used as a variable name but not as a class name 
+var is not allowed as an instance variable 
+var arr=new int[5]; correct
+int arr=new int[5]; incorrect (error) int arr[]=new int[5];
+
+----------------------------------------------------------------------------------
+Patterns
+----------------------------------------------------------------------------------
+Patterns-
+
+1. Architectural Patterns- MVC,MVVM/MVW,REST,Microservice etc.
+2. Messaging Patterns- P2P,Pub/Sub etc.
+3. Database Pattern- ER,DAO etc.
+4. Integration Pattern- Point to Point,Hub-n-Spoke, ESB etc.
+5. Programmatic Pattern- Mutable, Immutable etc.
+6. Design Pattern- 
+        - Object Oriented Design Pattern
+                -Java SE
+                        Creational : Singleton,Factory,Abstrat factory,Prototype,Builder
+                        Structural  : Adapter,Bridge,Composite,Flyweight,Decorator,Proxy,Facade,
+                        Behavioural : Observer,Chain of Responsibility(COR), Command,Template,Interpreter,Mediator, 
+                                        Memento,State,Visitor,Iterator,Strategy
+                -Java EE
+                        Presentation tier
+                        Business tier
+                        Integration tier
+
+Anti-Pattern
