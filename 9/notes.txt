@@ -1,0 +1,51 @@
+21/01/2025
+-------------------
+
+java.util.*
+
+Scanner
+Random
+Date
+Stack
+
+ArrayList
+LinkedList
+Hashset
+HashMap
+TreeMap
+TreeSet
+LinkedHashset
+PriorityQueue
+Collections
+Iterator
+
+Enumerations
+Iterator
+Comparator
+
+------------------------------------
+Collection Framework
+---------------------
+Collection
+    Set 
+        Hashset 
+        TreeSet
+        LinkedHashset
+    List
+        Vector // thread save
+            Stack
+        ArrayList // unsynchronized 
+        LinkedList
+    Queue 
+        PriorityQueue
+        Dequeue
+            ArrayQueue 
+Map 
+    Hashtable 
+    HashMap 
+    TreeMap
+    LinkedHashMap
+
+Enumerations- hasMoreElements(),nextElement()
+Iterator - hasNext(),next(),remove()
+

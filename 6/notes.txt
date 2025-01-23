@@ -1,0 +1,35 @@
+Factory Design Pattern
+------------------------------------
+many objects can be created unlike Singleton
+- in this first the method is called and then the condition is checked if the condition holds true then 
+    only object will be created
+
+class Author{
+    static int count=0;
+    private Author()
+    {
+
+    }
+    public static Author getAuthor()
+    {
+        if(count<=5)
+        {
+            count++;
+            return new Author();
+
+        }
+        return null;
+    }
+}
+--------------------------------
+Factory Abstrat
+- 
+-------------------------------
+Prototype-
+Student s2=s1.clone()
+it will directly copy the data from the address of the s1 as instead if we directly call then stack memory will be created for multiple calls 
+
+-----------------------
+Builder-
+
+Vehicle v1=Vehicle.setFuel("PETROL").setSeats(3).setWheels(4).loadCarrying(true).build();

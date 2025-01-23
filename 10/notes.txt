@@ -1,0 +1,8 @@
+we can resolve the warning but specifying generic data types while initializing the datatypes
+
+---------
+study these topics for tomorrow
+why and when which one would be used 
+1.covariant 
+2.invariant 
+3.contravariant 

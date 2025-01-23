@@ -1,0 +1,86 @@
+Packages
+----------
+java.util
+java.io 
+java.lang 
+java.time 
+java.sql
+java.net
+java.awt
+java.awt.event
+javax.swing
+javax.jms
+javax.xml
+........
+
+
+java.lang.*
+--------------
+String
+Object
+Class
+
+System
+Math
+Runtime
+
+Thread 
+ThreadGroup
+Runnable
+
+Throwable
+Exception
+RuntimeException
+AutoCloseable
+
+Number
+integer 
+double
+float 
+short
+byte
+long 
+boolean
+character
+
+Enum 
+
+-------------
+java.lang.reflect
+------------
+Field
+method
+Constructor
+
+java.lang.annonation
+----------
+Annonation
+
+Autoboxing
+Unboxing
+
+int a=10;
+Integer i=new Integer(a);
+LinkedList list=new LinkedList();
+list.add(10);
+
+int 
+Number
+integer
+numeric
+.........
+
+bytestream 
+
+String s1="hi";
+System.out.println(s1);
+s1="hello";
+System.out.println(s1); //hello
+s1.toUpperCase();
+System.out.println(s1); // hello
+
+Client Interview Question
+------------------------------------
+
+how to run non java program or files
+- we can use Runtime   
