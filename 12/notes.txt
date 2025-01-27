@@ -1,0 +1,40 @@
+Design Principles
+--------------
+-DRY (DON'T REPEAT YOURSELF)
+-KISS (KEEP IT SIMPLE)
+-SOLID
+S (Single Responsibility Principle)
+O (Open/Closed Principle)
+L (Liskov's Substitution Principle)
+I (Interface Segregation Principle)
+D (Dependency Inversion Principle)
+-----------------
+
+
+Clean Code Practices
+=====================
+*Choose noun words as class names
+*Choose verbs as method names
+*Choose entities on which actions is performed or the entities required to perform the action as varibale names
+*varibale/methods names start with small letter
+*Classes/Enums/Interface names start with capital letter
+*If more than one word then every next words first letter should be capital
+*if packages all letters are small
+*If constants then all letters in caps and if more than one word then seperated by underscore _
+*Give clear names
+*Comments(Avoid redundant Comments)
+*Exception Handling
+*Indentation
+---------
+covariant 
+List<? extends Number> list = new ArrayList<Integer>();  
+Number num = list.get(0);  
+
+contravariant 
+List<? super Integer> list = new ArrayList<Number>();  
+list.add(10);  
+
+invariant 
+List<Integer> integerList = new ArrayList<>();
+List<Number> numberList = new ArrayList<>();
+

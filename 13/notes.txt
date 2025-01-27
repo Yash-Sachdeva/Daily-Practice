@@ -1,0 +1,16 @@
+Types of Databases
+-------------
+Flat File
+Network Database
+Heirarchical Database
+DBMS
+RDBMS
+ORDBMS
+
+SQL
+NO-SQL
+
+FILE   VS    RDBMS
+
+STRUCTURED  VS  NON-STRUCTURED
+
