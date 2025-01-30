@@ -1,0 +1,123 @@
+create table EMPLOYEE(
+EID int PRIMARY KEY,
+NAME varchar(20) NOT NULL,
+AGE smallint CHECK(AGE BETWEEN 21 AND 60),
+GENDER varchar(6) CHECK(GENDER IN('MALE','FEMALE')),
+SALARY DECIMAL(10,2) CHECK(SALARY<=99999.99),
+DESIGNATION varchar(20) CHECK(DESIGNATION IN
+('PROGRAMMER','TESTER','ADMIN','MANAGER')),
+MGR_ID INT,
+EMAIL_ID varchar(20) CHECK(EMAIL_ID LIKE '%@%.com'),
+MARRIED BOOLEAN,
+JOINING_DATE DATE DEFAULT CURRENT_DATE,
+FOREIGN KEY(MGR_ID) REFERENCES EMPLOYEE(EID)
+);
+drop table EMPLOYEE;
+
+INSERT INTO EMPLOYEE values(1,'Yash',23,'MALE',10000,'MANAGER',null,'yash@gmail.com',TRUE,'2024-01-06');
+INSERT INTO EMPLOYEE values(2,'Gaurav',25,'MALE',9000,'TESTER',1,'gaurav@gmail.com',FALSE,'2024-01-19');
+INSERT INTO EMPLOYEE values(3,'Arushi',30,'FEMALE',25000,'PROGRAMMER',2,'arushi@gmail.com',FALSE,'2024-01-15');
+
+INSERT INTO EMPLOYEE values(3,'Arushi',30,'FEMALE',25000,'PROGRAMMER',10,'arushi@gmail.com',FALSE,'2024-01-15');
+
+
+select * from EMPLOYEE;
+
+select sum(SALARY),DESIGNATION from EMPLOYEE group by DESIGNATION having DESIGNATION IN('PROGRAMMER','MANAGER');
+
+
+select AVG(AGE),DESIGNATION from EMPLOYEE group by DESIGNATION having AGE between 22 and 25;
+
+SELECT * FROM EMPLOYEE LIMIT 2 OFFSET 2;
+
+select upper(NAME),AGE from EMPLOYEE;
+
+SELECT REVERSE('MadaM')='MadaM';
+
+create table ROLE(DESIGNATION varchar(20) primary key,MAX_LIMIT int ,MIN_SALARY decimal(8,2));
+
+INSERT INTO ROLE (DESIGNATION,MAX_LIMIT,MIN_SALARY) VALUES ('Tester',200,20000);
+INSERT INTO ROLE (dESIGNATION,MAX_LIMIT,MIN_SALARY) VALUES ('Admin',20,60000);
+INSERT INTO ROLE (dESIGNATION,MAX_LIMIT,MIN_SALARY) VALUES ('Programmer',10,70000);
+INSERT INTO ROLE (dESIGNATION,MAX_LIMIT,MIN_SALARY) VALUES ('Manager',8,100000);
+select * from role;
+
+
+select * from employee;
+
+select * from employee as e1 join employee e2 on e1.mgr_id=e2.eid where e1.salary>e2.salary;
+
+create or replace procedure abc()
+language plpgsql 
+as $$ 
+begin
+	insert into employee values(4,'Prashant',33,'MALE',12000,'MANAGER',null,'prashant@gmail.com',TRUE,'2024-01-09');
+end;
+$$
+
+
+create or replace procedure insert_into_procedure(emp_name,emp_id....)
+language plpgsql 
+as $$ 
+begin
+	insert into employee values(empname,empid,...);
+end;
+$$
+
+call abc();
+--call insert_into_procedure("yash",102);
+public void abc()
+{
+
+}
+
+
+create or replace procedure appraisal(
+id int,
+amount int
+)
+language plpgsql
+as $$
+begin
+	update employee set salary=salary+amount where eid=id;
+end;
+$$
+
+call appraisal(3,2000);
+
+select * from employee;
+
+create or replace function max_salary(desig varchar)
+returns table(eid int,name varchar, salary decimal	)
+as $$ 
+begin
+	return query
+	select e.eid,e.name,e.salary from employee e where e.DESIGNATION=desig and 	
+	e.salary=(select max(e2.salary) from employee e2 where e2.designation=desig);		
+end;
+$$ language plpgsql;
+
+
+drop function max_salary;
+select * from max_salary('PROGRAMMER');
+
+select name,salary,sum(salary) over (order by salary) from employee;
+
+select name,salary,rank() over(order by salary desc) from employee;
+
+select name,salary,dense_rank() over(order by salary desc) from employee;
+
+select name,salary,lag(salary) over() from employee;
+-- previous entry
+select name,salary,lead(salary) over() from employee;
+--next entry  
+
+-- (-lead=lag)
+
+--employees having more than avg salary in their designation--
+select e.eid,e.name,e.salary,e.designation from employee e
+where e.salary>(select avg(salary) from employee where designation=e.designation) order by e.designation,e.salary desc;
+
+
+
+

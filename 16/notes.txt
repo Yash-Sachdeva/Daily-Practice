@@ -1,0 +1,16 @@
+Types of ResultSet
+--------
+1.READ_ONLY(default)
+2.UPDATABLE
+3.FORWARD_ONLY(default)
+4.SCROLLABLE
+
+MetaData
+---------
+Data about Data
+(Information)(Content)
+
+EMPLOYEE(EID,NAME,AGE,SALARY,BASIC,HRA,TA,DA,PF,DESIGNATION,DEPARTMENT,HOD)
+
+
+

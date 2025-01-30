@@ -1,0 +1,16 @@
+JOINS
+
+inner join 
+outer join 
+    left outer join
+    right outer join
+full join 
+cross join 
+union 
+equi join 
+------------------------
+procedure vs function
+
+procedure does not return whereas function return a value 
+-----------------------
+

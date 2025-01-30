@@ -12,5 +12,46 @@ NO-SQL
 
 FILE   VS    RDBMS
 
-STRUCTURED  VS  NON-STRUCTURED
+STRUCTURED  VS  NON-STRUCTURED  VS SEMI-STRUCTURE
+
+with labels
+without labels
+
+SQL         VS     NO-SQL
+Schema Based      Schema less
+
+
+SQL-
+
+DDL(data definition language)-  CREATE,ALTER,RENAME,DROP,TRUNCATE
+DML(data manipulation language)- INSERT,DELETE,UPDATE
+DCL(Data control language)-      GRANT,REVOKE
+TCL(Transaction Control language)- COMMIT,ROLLBACK,SAVEPOINT
+DQL/DRL(data query/retrieval language)- SELECT 
+
+PL- OOP(C++,JAVA,.NET ),POP(C,...)
+SL- JS,SHELL,VBS etc
+ML- HTML,SGML,XML,XHTML etc
+QL- SQL,PL/SQL,No-SQL,XQuery etc.
+
+---------------------------------------------------------------------------------------------------------------------------
+PostGres-
+-----
+Keys:-
+Primary Key 
+Foreign Key 
+Unique Key 
+Candidate Key 
+Alternate Key 
+Composite Key 
+Surrogate Key 
+
+
+
+EMP_ID,Mobile,PAN,DLNo.,AcctNo.,Email 
+
+Fname,Mname,Lname,Age,Income,Gender,Marital Status
+
+
+
 

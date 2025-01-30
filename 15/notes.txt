@@ -1,0 +1,25 @@
+JDBC(JAVA DATABASE CONNECTIVITY)- SunMicroSystem
+ODBC(Open Database CONNECTIVITY)- Microsoft 
+
+JDBC
+--------------
+1. Load/Register the Driver
+    a. Type 1 (JDBC-ODBC Bridge)
+    b. Type 2 (Part Java Part Native)
+    c. Type 3 (Pure Native)
+    d. Type 4 (Pure Java(THIN))
+    // Class.forName("driver-class");
+2. Connect to Database/Establish the connection
+    Connection con=DriverManager.getConnection(url,uname,pwd);
+3. Create a Statement object
+    Statement stmt=con.createStatement();
+4. Execute Queries
+    stmt.executeUpdate
+
+set classpath=C:\Users\User\Desktop\jdbc_driver\postgresql-42.7.5.jar;.;%classpath%
+
+Types of Statements
+1.Simple Statement
+2.Prepared Statement
+3.Callable Statement
+4.Batch Statement
