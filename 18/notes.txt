@@ -1,0 +1,18 @@
+Advanced Java Features
+---------------
+Records 
+enum
+for-each loop
+try-with-resources
+Sealed classes 
+interface with multiple methods with body 
+Lambda Expressions 
+Method References 
+forEach() method 
+Stream API
+Date and Time API 
+Optional API 
+......
+
+
+

@@ -1,0 +1,90 @@
+Types of RowSet
+
+---------------------
+CachedRowSet
+JdbcRowSet
+FilterRowSet
+JoinRowSet
+
+WebRowSet
+
+SQL                VS            NO-SQL
+---------------------------------------------
+Schema based                   Schema less
+Ordered                        Unordered 
+Tables                         Collections 
+Rows/Records                   Documents
+Fields, Columns                Key:Value pair
+English like statement         Object.method/function calls 
+
+Mongo DB
+Cassandra DB
+Dynamo DB
+Redis
+Couch DB
+etc.
+
+MongoDB
+
+MEAN
+MERN
+CEAN 
+CERN 
+
+MongoDB
+------------
+1.mongod(server-side)
+2.mongosh(client-side) CLI 
+3.mongo-compass(client-side) GUI 
+4.mongo=atlas(cloud based)
+----------------------------------
+commands
+1. go to admin type mongod
+2. open sh type mongosh
+
+showdbs
+use demodb
+show collections 
+
+db.Employee.insertOne({'name':'yash','age':33});
+
+db.Employee.find({'designation':'Tester'});
+
+db.Employee.find({'age':{$lt:35}});
+
+db.Employee.find({$or:[{'age':{$gt:35}},{'designation':'Tester'}]});
+
+db.Employee.update({'name':'Dinesh'},{$set:{'salary':80000}});
+
+db.Employee.find({},{'name':1,'age':1,'_id':0});
+//output 
+[
+  { name: 'Raju', age: 25 },
+  { name: 'Manju', age: 35 },
+  { name: 'Suman', age: 45 },
+  { name: 'Dinesh', age: 33 },
+  { name: 'Tanuja', age: 23 },
+  { name: 'Manisha', age: 43 },
+  { name: 'Prashant', age: 28 },
+  { name: 'Pooja', age: 28 }
+]
+
+-------------------------------------------------------------------
+db.Employee.find({},{'name':1,'age':1,'_id':0}).limit(5);
+
+db.Employee.find({},{'name':1,'age':1,'_id':0}).skip(5);
+
+db.Employee.find({},{'name':1,'age':1,'_id':0}).sort({'age':1});
+
+db.Employee.find({},{'name':1,'age':1,'_id':0}).sort({'age':-1});
+
+db.Employee.find({},{'name':1,'age':1,'_id':0}).sort({'age':-1,'designation':1});
+
+db.Employee.deleteOne({'name':'Manju'});
+
+db.Employee.drop();
+
+db.dropDatabase()
+
+----------------------------------------------------------------------------
+

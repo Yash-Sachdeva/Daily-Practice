@@ -1,0 +1,20 @@
+assertEquals(expected,actual,"message")
+
+int x=10
+int y=20
+int z=30 
+
+assertEquals(z,c1.add(x,y),"the sum of"+x+"and "+y+"is"+z);
+
+assertEquals(z,c1.add(x,y),()->"the sum of"+x+"and "+y+"is"+z); 
+// passing function as an argument the function is not called multiple thousand of times and reduces the time taken for the program to get 
+executed and thus saves time and only execute function if the first two conditions are not matched
+
+// to achieve lazy evaluation
+assertEquals(expected,actual,Function f)
+{
+    if(expected!=actual)
+    {
+        f();
+    }
+}
